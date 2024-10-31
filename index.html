@@ -39,7 +39,10 @@
                 new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, 
                 function (evt) {
                     const sourceBox = evt.meshUnderPointer;
-                    sourceBox.size += 0.1; 
+                    sourceBox.position.z += 0.1;
+                    sourceBox.scaling.x += 0.01;
+                    sourceBox.scaling.y += 0.01;
+                    sourceBox.scaling.z += 0.01; 
 
                     boxMaterial.diffuseColor = BABYLON.Color3.Random();
                 }));
